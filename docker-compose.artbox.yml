@@ -1,0 +1,11 @@
+services:
+  artbox:
+    image: artbox-quantum:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./data:/data
+      - ./config:/config
+    environment:
+      - ARTBOX_EDITION=Quantum
+      - ARTBOX_BRAND=Art Philip Studio
