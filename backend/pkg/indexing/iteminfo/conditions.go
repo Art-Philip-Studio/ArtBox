@@ -1,4 +1,4 @@
-package iteminfo
+﻿package iteminfo
 
 import (
 	"mime"
@@ -447,6 +447,9 @@ func (i *ItemInfo) DetectType(realPath string, saveContent bool) {
 		return
 	case ".heic", ".heif":
 		i.Type = "image/heic"
+		return
+	case ".psd":
+		i.Type = "image/vnd.adobe.photoshop"
 		return
 	case ".kmz":
 		i.Type = "application/vnd.google-earth.kmz"

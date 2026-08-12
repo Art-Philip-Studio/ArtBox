@@ -1,4 +1,4 @@
-package preview
+﻿package preview
 
 import (
 	"bytes"
@@ -110,8 +110,8 @@ func NewPreviewGenerator(concurrencyLimit int, cacheDir string) *Service {
 		logger.Debugf("Image processor split: %d small, %d large (total: %d)", smallLimit, largeLimit, concurrencyLimit)
 	}
 
-	// Total max memory = concurrencyLimit × 50MB
-	// Example: concurrencyLimit=10 → ~500MB max
+	// Total max memory = concurrencyLimit Ã— 50MB
+	// Example: concurrencyLimit=10 â†’ ~500MB max
 	settings.Env.MuPdfAvailable = docEnabled()
 
 	return &Service{
@@ -218,6 +218,7 @@ const (
 	previewTypeDocument filePreviewType = iota
 	previewTypeOffice
 	previewTypeHEIC
+	previewTypePSD
 	previewTypeImage
 	previewTypeVideo
 	previewTypeAudio
@@ -240,6 +241,10 @@ func determinePreviewType(file iteminfo.ExtendedFileInfo) filePreviewType {
 	if strings.HasPrefix(file.Type, "image/heic") &&
 		*settings.Config.Integrations.Media.Convert.ImagePreview[settings.HEICImagePreview] {
 		return previewTypeHEIC
+	}
+
+	if file.Type == "image/vnd.adobe.photoshop" {
+		return previewTypePSD
 	}
 
 	// Check by MIME type prefix
@@ -268,6 +273,9 @@ func (s *Service) generateRawPreview(ctx context.Context, file iteminfo.Extended
 
 	case previewTypeHEIC:
 		return s.generateHEICPreview(ctx, file, previewSize)
+
+	case previewTypePSD:
+		return s.generatePSDPreview(ctx, file, previewSize)
 
 	case previewTypeImage:
 		return s.generateImagePreview(ctx, file, previewSize)
