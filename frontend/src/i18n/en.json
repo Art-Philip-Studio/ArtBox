@@ -1,4 +1,4 @@
-{
+﻿{
   "messages": {
     "pathNotFound": "Path does not exist on filesystem",
     "pathNotFoundMessage": "The path for this no longer exists on the filesystem. It may have been moved or deleted.",
@@ -252,7 +252,7 @@
     "f1": "show help prompt",
     "slash": "activate search",
     "description": "You can view the basic naviagation options below. For additional information, please visit",
-    "wiki": "FileBrowser Quantum Official Docs",
+    "wiki": "ArtBox Official Docs",
     "altArrowUp": "Go to parent folder",
     "altArrowDown": "Open selected file/folder",
     "media": {
@@ -271,33 +271,33 @@
     }
   },
   "languages": {
-    "ar": "العربية",
-    "bg": "Български",
-    "cz": "Čeština",
+    "ar": "Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©",
+    "bg": "Ð‘ÑŠÐ»Ð³Ð°Ñ€ÑÐºÐ¸",
+    "cz": "ÄŒeÅ¡tina",
     "de": "Deutsch",
-    "el": "Ελληνικά",
+    "el": "Î•Î»Î»Î·Î½Î¹ÎºÎ¬",
     "en": "English",
-    "es": "Español",
-    "fr": "Français",
-    "he": "עברית",
+    "es": "EspaÃ±ol",
+    "fr": "FranÃ§ais",
+    "he": "×¢×‘×¨×™×ª",
     "hu": "Magyar",
     "is": "Icelandic",
     "it": "Italiano",
-    "ja": "日本語",
-    "ko": "한국어",
+    "ja": "æ—¥æœ¬èªž",
+    "ko": "í•œêµ­ì–´",
     "nl": "Nederlands",
-    "nlBE": "Nederlands (België)",
+    "nlBE": "Nederlands (BelgiÃ«)",
     "pl": "Polski",
-    "pt": "Português",
-    "ptBR": "Português (Brasil)",
+    "pt": "PortuguÃªs",
+    "ptBR": "PortuguÃªs (Brasil)",
     "ro": "Romanian",
-    "ru": "Русский",
-    "sk": "Slovenčina",
+    "ru": "Ð ÑƒÑÑÐºÐ¸Ð¹",
+    "sk": "SlovenÄina",
     "svSE": "Swedish (Sweden)",
-    "tr": "Türkçe",
-    "ua": "Українська",
-    "zhCN": "中文 (简体)",
-    "zhTW": "中文 (繁體)"
+    "tr": "TÃ¼rkÃ§e",
+    "ua": "Ð£ÐºÑ€Ð°Ñ—Ð½ÑÑŒÐºÐ°",
+    "zhCN": "ä¸­æ–‡ (ç®€ä½“)",
+    "zhTW": "ä¸­æ–‡ (ç¹é«”)"
   },
   "login": {
     "createAnAccount": "Create an account",
@@ -449,7 +449,7 @@
     "errorGeneratingHash": "Error generating hash",
     "token": "Token",
     "onlyOfficeId": "OnlyOffice ID",
-    "firstLoadTitle": "Welcome to FileBrowser Quantum!",
+    "firstLoadTitle": "Welcome to ArtBox!",
     "firstLoadBody": "A new database was created on startup. If this is not what you expected, please double check your configuration file for `server.database` path and ensure it exists. On docker, database path could be `./data/database.db` or `./database.db`.",
     "halloweenTitle": "Happy Halloween!",
     "halloweenBody": "The Halloween theme has been applied. You can disable it if you don't like it, or permanently disable it in profile settings by selecting any other theme.",
@@ -474,7 +474,7 @@
     "showPreviewImages": "Show preview images",
     "showPreviewImagesDescription": "Display thumbnail previews for search results when available, and show larger icons for all results.",
     "useWildcardSearch": "Wildcard search",
-    "useWildcardSearchDescription": "Supported wildcard options:\n\n• Match any sequence: *\n\n• Match one character: ?\n\n• Character class: [a-z], [0-9]\n\n• Negation: [^0-9]\n\n• Literal *, ?, or [ need to be wrapped in brackets, e.g. [*], [?], [[]",
+    "useWildcardSearchDescription": "Supported wildcard options:\n\nâ€¢ Match any sequence: *\n\nâ€¢ Match one character: ?\n\nâ€¢ Character class: [a-z], [0-9]\n\nâ€¢ Negation: [^0-9]\n\nâ€¢ Literal *, ?, or [ need to be wrapped in brackets, e.g. [*], [?], [[]",
     "caseExact": "Case-sensitive match",
     "caseExactDescription": "Match file and folder names using exact letter casing instead of ignoring upper and lower case.",
     "helpText1": "Search occurs on each character you type ({minSearchLength} character minimum).",
@@ -572,7 +572,7 @@
     "analyticsView": "View analytics",
     "analyticsViewDescription": "Open a read-only view of the deployment analytics snapshot collected from this server.",
     "analyticsEnabled": "Send deployment analytics",
-    "analyticsEnabledDescription": "Opt-in deployment analytics will send anonymous information to the FileBrowser Quantum developer servers to help make the application better.",
+    "analyticsEnabledDescription": "Opt-in deployment analytics will send anonymous information to the ArtBox developer servers to help make the application better.",
     "analyticsLoadFailed": "Failed to load analytics settings",
     "analyticsUpdateFailed": "Failed to update analytics settings",
     "analyticsPreviewFailed": "Failed to load analytics diagnostic info",
@@ -1014,3 +1014,5 @@
     "install": "Install app"
   }
 }
+
+

@@ -280,7 +280,7 @@ func setupFrontend(generate bool) {
 		})
 	}
 	if Config.Frontend.Description == "" {
-		Config.Frontend.Description = "FileBrowser Quantum is a file manager for the web which can be used to manage files on your server"
+		Config.Frontend.Description = "ArtBox is a file manager for the web which can be used to manage files on your server"
 	}
 	Config.Frontend.Styling.LightBackground = FallbackColor(Config.Frontend.Styling.LightBackground, "#f5f5f5")
 	Config.Frontend.Styling.DarkBackground = FallbackColor(Config.Frontend.Styling.DarkBackground, "#141D24")
@@ -873,7 +873,7 @@ func SetDefaults(generate bool) Settings {
 			},
 		},
 		Frontend: Frontend{
-			Name: "FileBrowser Quantum",
+			Name: "ArtBox",
 		},
 		UserDefaults: UserDefaults{
 			// New organized structure
@@ -1205,3 +1205,4 @@ func modifyExcludeInclude(config *Source) {
 	config.Config.Rules = allRules
 
 }
+
