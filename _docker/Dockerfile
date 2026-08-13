@@ -28,7 +28,7 @@ ENV FILEBROWSER_FFMPEG_PATH="/usr/local/bin/"
 ENV FILEBROWSER_DATABASE_PATH="/home/filebrowser/data/database.sqlite"
 ENV FILEBROWSER_CONFIG="/home/filebrowser/data/config.yaml"
 ENV PATH="$PATH:/home/filebrowser"
-RUN apk --no-cache add ca-certificates mailcap tzdata curl
+RUN apk --no-cache add ca-certificates mailcap tzdata curl su-exec
 RUN adduser -D -s /bin/true -u 1000 filebrowser
 USER filebrowser
 WORKDIR /home/filebrowser
@@ -46,4 +46,6 @@ RUN [ "ffprobe", "-version" ]
 EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
   CMD curl -f http://localhost:80/health || exit 1
-ENTRYPOINT [ "./filebrowser" ]
+USER root
+COPY --chmod=755 _docker/entrypoint.sh /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
